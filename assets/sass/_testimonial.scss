@@ -1,0 +1,163 @@
+.testimonial {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 28.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include rwd(large) {
+    flex-direction: row-reverse;
+    background-size: 61rem;
+  }
+
+  &__carousel {
+    position: relative;
+    width: 32.7rem;
+    height: 30.8rem;
+    background-image: url(../images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2.4rem 2.4rem 0 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include rwd(large) {
+      width: 65rem;
+      height: 63rem;
+      margin: 0;
+      background-size: contain;
+    }
+  }
+
+  &__img {
+    width: 25.4rem;
+    height: 25.3rem;
+    border-radius: 1rem;
+    box-shadow: 0 35px 15px -19px rgba(111, 85, 168, 0.3);
+
+    @include rwd(large) {
+      width: 54rem;
+      height: 54rem;
+    }
+  }
+
+  &__arrowsBox {
+    background-color: white;
+    position: absolute;
+    bottom: 1.4rem;
+    border-radius: 4rem;
+
+    @include rwd(large) {
+      left: 11.5rem;
+    }
+  }
+
+  &__arrow {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    -webkit-tap-highlight-color: transparent;
+
+    @include rwd(large) {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+  }
+
+  &__quoteBox {
+    display: -webkit-box;
+    flex-direction: column;
+    justify-content: end;
+    width: 31.1rem;
+    height: 22.8rem;
+    background-image: url(../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 60px 50px;
+    background-position: center top;
+    margin: 3.2rem 3.2rem 7.5rem 3.2rem;
+    z-index: 1;
+
+    @include rwd(large) {
+      width: 63.5rem;
+      height: 35.4rem;
+      margin: 0;
+      margin-right: -11.5rem;
+      background-size: 120px 100px;
+      background-position: 19% top;
+    }
+  }
+
+  &__quote {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: $brand-100;
+    margin-bottom: 1.9rem;
+
+    @include rwd(large) {
+      font-size: 3.2rem;
+      line-height: 4.4rem;
+      text-align: start;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    text-align: center;
+    color: $brand-100;
+
+    span {
+      display: block;
+
+      @include rwd(large) {
+        display: inline;
+        margin-right: 1rem;
+      }
+    }
+
+    span:last-child {
+      font-weight: 500;
+      color: $brand-200;
+    }
+
+    @include rwd(large) {
+      font-size: 2rem;
+      line-height: 3.8rem;
+      text-align: start;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+}
+
+[class$="--tanya"],
+[class$="--john"] {
+  display: none;
+}
+
+.show {
+  display: block;
+  animation: fadeIn 1s;
+}

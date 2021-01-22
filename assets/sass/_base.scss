@@ -1,0 +1,39 @@
+// FONT
+$main-font: "Inter", sans-serif;
+
+// TEXT COLORS
+$brand-100: hsl(240, 38%, 20%);
+$brand-200: hsl(240, 18%, 77%);
+
+//Responsive Variables.
+$breakpoints: (
+  small: 375px,
+  medium: 768px,
+  large: 1028px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+//Responsive Function
+@mixin rwd($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (min-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

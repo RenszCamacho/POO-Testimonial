@@ -1,14 +1,20 @@
-# Bundler Boiler Plate. 💫
+# Frontend Mentor - Coding Bootcamp Testimonials Slider
 
-- A boiler plate to start.
+![Design preview for the Coding Bootcamp Testimonials Slider coding chttps://coding-bootcamp-fm.netlify.app/hallenge](./assets/design/desktop-preview.jpg)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c5a44590-3ad5-42c5-bcb5-c9af85031c40/deploy-status)](https://app.netlify.com/sites/coding-bootcamp-fm/deploys)
+
+[coding-bootcamp-fm.netlify.app](https://coding-bootcamp-fm.netlify.app/)
+
+- This is a Frontend Mentor Challenge, newbie-level. A beautiful carousel that I've really enjoyed it. Using Css Flex-box . Pure HTML CSS and JS. (No frameworks)
 
 ### Clone the repository
 
 ### Install the dependencies
 
 ```bash
-git clone https://github.com/RenszCamacho/BundlerJs
-cd BundlerJs
+git clone https://github.com/RenszCamacho/coding-bootcamp
+cd coding-bootcamp
 ```
 
 ## Install the dependencies
@@ -30,4 +36,22 @@ npm run dev or yarn dev
 #Build for Production
 npm run build or yarn build
 ```
-# POO-Testimonial
+
+This is deployed on Netlify.
+
+## Tools. ⚒️
+
+- HTML5.
+- CSS3.
+- ParcelJs(Bundler).
+- Sass(Css Pre-precesor).
+- Methodology/BEM(Css Especificity).
+- Git and Github.
+
+```
+
+```
+
+```
+
+```
