@@ -3,10 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bundler</title>
+    <meta
+      property="description"
+      content="Frontend Mentor Challenge | Coding Bootcamp Testimonials Slider."
+    />
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
     <script defer src="./assets/index.js"></script>
   </head>
   <body>
-    <h1>BundlerJs</h1>
+    <main id="root">
+      <section class="testimonial">
+        <h1 class="sr-only">Coding Bootcamp Testimonials Slider</h1>
+        <div class="testimonial__carousel">
+          <span class="sr-only">this is a slider</span>
+          <img
+            class="show testimonial__img testimonial__img--tanya"
+            src="./assets/images/image-tanya.jpg"
+            alt="tanya"
+          />
+          <img
+            class="testimonial__img testimonial__img--john"
+            src="./assets/images/image-john.jpg"
+            alt="john"
+          />
+          <div class="testimonial__arrowsBox">
+            <button
+              id="previous"
+              name="previous"
+              aria-label="previous"
+              type="button"
+              class="testimonial__arrow"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18">
+                <path
+                  fill="none"
+                  stroke="#8585AC"
+                  stroke-width="3"
+                  d="M11 1L3 9l8 8"
+                />
+              </svg>
+            </button>
+            <button
+              id="next"
+              name="next"
+              aria-label="next"
+              type="button"
+              class="testimonial__arrow"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18">
+                <path
+                  fill="none"
+                  stroke="#8585AC"
+                  stroke-width="3"
+                  d="M2 1l8 8-8 8"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonial__quoteBox">
+          <span class="sr-only">this is a testimonial quote</span>
+          <p class="show testimonial__quote testimonial__quote--tanya">
+            “ I’ve been interested in coding for a while but never taken the
+            jump, until now. I couldn’t recommend this course enough. I’m now in
+            the job of my dreams and so excited about the future. ”
+          </p>
+          <h2 class="show testimonial__subtitle testimonial__subtitle--tanya">
+            <span>Tanya Sinclair</span>
+            <span>UX Engineer</span>
+          </h2>
+
+          <p class="testimonial__quote testimonial__quote--john">
+            “ If you want to lay the best foundation possible I’d recommend
+            taking this course. The depth the instructors go into is incredible.
+            I now feel so confident about starting up as a professional
+            developer. ”
+          </p>
+          <h2 class="testimonial__subtitle testimonial__subtitle--john">
+            <span>John Tarkpor</span>
+            <span>Junior Front-end Developer</span>
+          </h2>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
