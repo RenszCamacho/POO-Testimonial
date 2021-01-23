@@ -8,7 +8,7 @@ export const tanya = new Testimonial(
 );
 
 export const john = new Testimonial(
-  "url(../images/image-john.jpg)",
+  "https://coding-bootcamp-fm.netlify.app/image-john.4ce369e4.jpg",
   "John Tarkpor",
   "Junior Front-end Developer",
   "“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”"

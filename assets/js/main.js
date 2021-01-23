@@ -1,11 +1,14 @@
-import { tanya } from "./data.js";
+import { tanya, john } from "./data.js";
 
 const root = document.getElementById("root");
 
 function bootcamp(user) {
   const div = document.createElement("div");
   div.innerHTML = `
-         <div class="testimonial__carousel">
+
+      <section class="testimonial">
+        <h1 class="sr-only">Coding Bootcamp Testimonials Slider</h1>
+        <div class="testimonial__carousel">
           <span class="sr-only">this is a slider</span>
           <img
             class="show testimonial__img testimonial__img--tanya"
@@ -56,9 +59,10 @@ function bootcamp(user) {
             <span>${user.getProfesion()}</span>
           </h2>
         </div>
+      </section>
 
        `;
   root.appendChild(div);
 }
 
-bootcamp(tanya);
+bootcamp(john);
