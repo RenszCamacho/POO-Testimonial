@@ -1,24 +1,16 @@
-import { tanya, john } from "./data.js";
-console.log(tanya);
-console.log(john);
+import { tanya } from "./data.js";
 
-const main = document.getElementById("root");
+const root = document.getElementById("root");
 
 function bootcamp(user) {
-  const section = document.createElement("main");
-  section.innerHTML = `
-
-<div class="testimonial__carousel">
+  const div = document.createElement("div");
+  div.innerHTML = `
+         <div class="testimonial__carousel">
           <span class="sr-only">this is a slider</span>
           <img
             class="show testimonial__img testimonial__img--tanya"
-            src="./assets/images/image-tanya.jpg"
-            alt="tanya"
-          />
-          <img
-            class="testimonial__img testimonial__img--john"
-            src="./assets/images/image-john.jpg"
-            alt="john"
+            src="${user.getImage()}"
+            alt="${user.getName()}"
           />
           <div class="testimonial__arrowsBox">
             <button
@@ -55,5 +47,18 @@ function bootcamp(user) {
             </button>
           </div>
         </div>
-  `;
+
+        <div class="testimonial__quoteBox">
+          <span class="sr-only">this is a testimonial quote</span>
+          <p class="show testimonial__quote testimonial__quote--tanya">${user.getQuote()}</p>
+          <h2 class="show testimonial__subtitle testimonial__subtitle--tanya">
+            <span>${user.getName()}</span>
+            <span>${user.getProfesion()}</span>
+          </h2>
+        </div>
+
+       `;
+  root.appendChild(div);
 }
+
+bootcamp(tanya);

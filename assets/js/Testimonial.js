@@ -5,4 +5,30 @@ export default class Testimonial {
     this.profesion = profesion;
     this.quote = quote;
   }
+
+  getImage() {
+    return this.image;
+  }
+  getName() {
+    return this.name;
+  }
+  getProfesion() {
+    return this.profesion;
+  }
+  getQuote() {
+    return this.quote;
+  }
+
+  setImage() {
+    return this.image;
+  }
+  setName() {
+    return this.name;
+  }
+  setProfesion() {
+    return this.profesion;
+  }
+  setQuote() {
+    return this.quote;
+  }
 }
