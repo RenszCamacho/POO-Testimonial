@@ -1,6 +1,9 @@
+import tanya from "../images/image-tanya.jpg";
+import john from "../images/image-john.jpg";
+
 const user = {
   tanya: {
-    image: "https://coding-bootcamp-fm.netlify.app/image-tanya.42e44a5f.jpg",
+    image: tanya,
     fullName: "Tanya Sinclair",
     profession: "UX Engineer",
     quote:
@@ -8,7 +11,7 @@ const user = {
   },
 
   john: {
-    image: "https://coding-bootcamp-fm.netlify.app/image-john.4ce369e4.jpg",
+    image: john,
     fullName: "John Tarkpor",
     profession: "Junior Front-end Developer",
     quote:
