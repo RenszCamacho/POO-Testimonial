@@ -1,23 +1,21 @@
-import { state } from "./App.js";
-
-export default class UI {
-  render(element) {
+class UI {
+  render(user1, user2) {
     const root = document.getElementById("root"),
-      div = document.createElement("div");
-    div.innerHTML = `
-  <section class="testimonial">
+      section = document.createElement("section");
+    section.className = "testimonial";
+    section.innerHTML = `
         <h1 class="sr-only">Coding Bootcamp Testimonials Slider</h1>
         <div class="testimonial__carousel">
           <span class="sr-only">this is a slider</span>
           <img
             class="show testimonial__img testimonial__img--tanya"
-            src="${element.img}"
-            alt="${element.name}"
+            src="${user1.image}"
+            alt="${user1.fullName}"
           />
           <img
             class="testimonial__img testimonial__img--john"
-            src="${element.img}"
-            alt="${element.name}"
+            src="${user2.image}"
+            alt="${user2.fullName}"
           />
           <div class="testimonial__arrowsBox">
             <button
@@ -57,31 +55,43 @@ export default class UI {
 
         <div class="testimonial__quoteBox">
           <span class="sr-only">this is a testimonial quote</span>
-          <p class="show testimonial__quote testimonial__quote--tanya">${element.quote}</p>
+          <p class="show testimonial__quote testimonial__quote--tanya">
+            ${user1.quote}
+          </p>
           <h2 class="show testimonial__subtitle testimonial__subtitle--tanya">
-            <span>${element.name}</span>
-            <span>${element.profesion}</span>
+            <span>${user1.fullName}</span>
+            <span>${user1.profession}</span>
           </h2>
 
           <p class="testimonial__quote testimonial__quote--john">
-           ${element.quote}
+            ${user2.quote}
           </p>
           <h2 class="testimonial__subtitle testimonial__subtitle--john">
-            <span>${element.name}</span>
-            <span>${element.profesion}</span>
+            <span>${user2.fullName}</span>
+            <span>${user2.profession}</span>
           </h2>
         </div>
-      </section>
     `;
-    root.appendChild(div);
+    root.appendChild(section);
   }
 
-  handleClick(element) {
-    let newState;
-    if (element.name === "next" || element.name === "previous") {
-      newState = state.test = !state.test;
-      console.log(newState);
-    }
-    null;
+  handleClick() {
+    const next = document.getElementById("next");
+    const previous = document.getElementById("previous");
+
+    const toogle = (btn) => {
+      const users = document.querySelectorAll(
+        '[class$="--tanya"],[class$="--john"]'
+      );
+
+      btn.addEventListener("click", () => {
+        users.forEach((user) => user.classList.toggle("show"));
+      });
+    };
+
+    toogle(next);
+    toogle(previous);
   }
 }
+
+export default UI;

@@ -75,9 +75,9 @@
   }
 
   &__quoteBox {
-    display: -webkit-box;
+    display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     width: 31.1rem;
     height: 22.8rem;
     background-image: url(../images/pattern-quotes.svg);
